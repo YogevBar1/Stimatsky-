@@ -1,0 +1,28 @@
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Summary</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let b of books">
+                <td>{{b.bookName}}</td>
+                <td>{{b.summary}}</td>
+                <td>{{b.category.categoryName}}</td>
+                <td>{{b.price}}</td>
+                <td>{{b.stock}}</td>
+                <td>
+                    <button (click)="deleteMe(b._id)">❌</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+
+</div>
